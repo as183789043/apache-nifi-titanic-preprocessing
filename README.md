@@ -20,7 +20,7 @@ A hands-on Apache NiFi data pipeline demonstrating record processing (CSV to JSO
 ## 🚀 How to Replicate This Pipeline
 
 ### Prerequisites
-* Apache NiFi **2.x** instance
+* Apache NiFi **2.x** instance (Default HTTPS Web UI Port: `8443`)
 * Download the flow definition file (`.json`) and the test dataset (`train.csv`) from this repository.
 
 ### Step 1: Create an Empty Process Group
@@ -47,3 +47,12 @@ Open the `GetFile` / `ListFile` processor configuration and ensure the input dir
 
 * **Content Mutation (Payload Transformation)**: Perform field mapping and binary conversions (`Sex`: `male/female` -> `1/0`) using `UpdateRecord`.
 <img width="1982" height="617" alt="FlowFile Content View" src="https://github.com/user-attachments/assets/0e335095-92c0-4bf1-9da5-2471df61c523" />
+
+---
+
+## ⚠️ Version Control Integration (NiFi Registry)
+
+* **Registry Service Port**: `18080` (Default HTTP)
+* **Deprecation Notice**: Apache NiFi Registry is officially deprecated in NiFi 2.x and is planned to be completely removed in **Apache NiFi 3.0**. Direct Git integration and file-based Flow Definitions (`.json`) are recommended for future-proof workflow management.
+
+<img width="1967" height="742" alt="Apache NiFi Registry Flow UI" src="https://github.com/user-attachments/assets/2c938603-00b7-4226-a9ea-bb934e0e5ddb" />
